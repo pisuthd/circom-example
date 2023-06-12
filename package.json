@@ -1,0 +1,25 @@
+{
+  "name": "circom-example",
+  "version": "0.1.0",
+  "description": "This repository contains example circuits written in the Circom language. The examples utilize `circomlibjs`, `circom_tester` and `snarkjs` libraries to demonstrate the implementation of zk-SNARK without requiring a trusted setup and installing the full `circom` binary.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --timeout 60000 --reporter spec test/*.js"
+  }, 
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pisuthd/circom-example.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pisuthd/circom-example/issues"
+  },
+  "homepage": "https://github.com/pisuthd/circom-example#readme",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "circom_tester": "^0.0.19",
+    "circomlibjs": "^0.1.7",
+    "mocha": "^10.2.0"
+  }
+}
