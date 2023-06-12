@@ -13,19 +13,19 @@ describe('#binary-check', () => {
     })
 
     it("Succeeded when input = 0", async () => {
-        const witness = await circuit.calculateWitness({ in: 0 }, true);
+        const witness = await circuit.calculateWitness({ in: 0 });
         await circuit.assertOut(witness, { out: 0 });
     })
 
     it("Succeeded when input = 1", async () => {
-        const witness = await circuit.calculateWitness({ in: 1 }, true);
+        const witness = await circuit.calculateWitness({ in: 1 });
         await circuit.assertOut(witness, { out: 1 });
     })
 
     it("Failed when the input is not binary", async () => {
 
         try {
-            const witness = await circuit.calculateWitness({ in: 2 }, true);
+            const witness = await circuit.calculateWitness({ in: 2 });
             await circuit.assertOut(witness, { out: 2 });
         } catch (e) {
             expect((e.message).includes("Error in template binaryCheck_0")).to.true
